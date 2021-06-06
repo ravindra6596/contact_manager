@@ -1,0 +1,116 @@
+body {
+	background: #e2e2e2;
+}
+
+.bg-primary {
+	background: #9F98F1 !important;
+}
+a {
+    text-decoration: none !important;
+}
+.banner {
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)),
+		url("../images/call.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 93vh;
+	color: #ffffff;
+}
+
+.btn-primary:hover {
+	background: #9F98F1 !important;
+}
+
+.my-card {
+	padding: 20px;
+	background: #FFFFFF;
+}
+/* Sidebar Style */
+@media only screen and (max-width:600px) {
+	.sidebar {
+	display:none;
+		width: 80% !important;
+		height: 100vh;
+		background: #ffffff;
+		position: fixed;
+		padding-top: 20px;
+	}
+	.content{
+	margin-left: 0% !important;
+	}
+}
+
+.sidebar {
+	width: 18%;
+	height: 100%;
+	background: #ffffff;
+	position: fixed;
+	padding-top: 50px;
+	/* z-index: 9999999999999999; */
+}
+
+.sidebar a {
+	display: block;
+	width: 100%;
+	color: gray;
+	text-decoration: none;
+	padding: 10px 25px;
+}
+
+.sidebar a:hover {
+	background: #e2e2e2;
+}
+
+.sidebar .divider {
+	margin-top: 10px;
+	background: gray;
+	width: 100%;
+	height: .5px;
+}
+.sidebar .crossbtn{
+	position: absolute;
+	font-size: 35px;
+	top: 0;
+	right: 35px;
+	cursor: pointer;
+}
+/* Content Style */
+.content {
+	margin-left: 20%;
+}
+/*		Auto increment table value in all contacts*/
+table {
+  counter-reset: section;
+}
+
+.count:before {
+  counter-increment: section;
+  content: counter(section);
+}
+.buttons{
+	
+}
+/*Profile pic */
+.profile{
+	width: 35px;
+	height: 35px;
+	object-fit:cover;
+	 border-radius: 50%;
+	 border: 1px solid black;
+}
+/* Serach Bar*/
+.search-container{
+	position: relative;
+}
+.search-result{
+	position: absolute;
+	width: 100%;
+	border: 1px solid gray;
+	padding: 10px;
+	display: none;
+	background: white;
+}
+.active{
+	background: #9F98F1;
+	color: #ffffff !important;
+}

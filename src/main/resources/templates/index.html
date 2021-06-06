@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="header::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Login </title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 offset-md-3 mt-3">
+					<div class="my-card mt-4">
+						<div class="div contaner text-center">
+							<img style="width: 100px;'" th:src="@{/images/login.png}" alt="" />
+						</div>
+
+						<form class="form" th:action="@{/dologin}" method="post"
+							action="#">
+							<h1 class="text-center">Login Here</h1>
+							<div th:if="${param.error}" class="alert alert-danger"
+								id="success-alert">Invalid Username and Password</div>
+							<div class="alert alert-success" th:if="${param.logout}"
+								id="success-alert">You are successfully logged out</div>
+								<div class="alert alert-success" th:if="${param.change}"
+								id="success-alert">You Password Successfully Changed!!
+								<!-- <p th:text="${param.change}"></p> -->
+								</div>
+							<div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">Username
+								</label> <input type="email" class="form-control" value="ravipatil6596@gmail.com"
+									id="exampleInputEmail1" aria-describedby="emailHelp"
+									name="username">
+
+							</div>
+							<div class="mb-3">
+								<label for="exampleInputPassword1" class="form-label">Password</label>
+								<input type="password" class="form-control" name="password"
+									value="ravi6596" id="exampleInputPassword1">
+							</div>
+							<div class="mb-3 form-check">
+								<input type="checkbox" class="form-check-input"
+									id="exampleCheck1"> <label class="form-check-label"
+									for="exampleCheck1">Check me out</label>
+							</div>
+							<div class="row">
+								<div class="col-md-9">
+									
+										<a href="/signup/" class="text-info">Register Here</a>
+									
+								</div>
+								<div class="col-md-3 float-right">
+									
+										<a href="/forgot" class="text-info">Forgot Password</a>
+									
+								</div>
+							</div>
+							<div class="text-center my-3">
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
